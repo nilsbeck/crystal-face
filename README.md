@@ -1,3 +1,10 @@
+# This fork does just one thing: it updates the current layout and default values for my Garmin Vivoactive 4s to exactly what I want.
+
+It looks like this:
+
+![screen](/vivoactive.png)
+
+
 # Crystal
 A Garmin Connect IQ watch face.
 
