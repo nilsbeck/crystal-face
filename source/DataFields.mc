@@ -177,7 +177,7 @@ class DataFields extends Ui.Drawable {
 		if (isPartialUpdate) {
 			dc.setClip(
 				x - 11,
-				mBottom - 4,
+				mBottom - 20,
 				25,
 				12);
 			
@@ -230,7 +230,7 @@ class DataFields extends Ui.Drawable {
 			// Clip spot.
 			dc.setClip(
 				x - 3 /* LIVE_HR_SPOT_RADIUS */,
-				mTop - 3 /* LIVE_HR_SPOT_RADIUS */,
+				mTop - 11 /* LIVE_HR_SPOT_RADIUS */,
 				7, // (2 * LIVE_HR_SPOT_RADIUS) + 1
 				7); // (2 * LIVE_HR_SPOT_RADIUS) + 1
 

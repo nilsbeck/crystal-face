@@ -128,7 +128,7 @@ class CrystalView extends Ui.WatchFace {
 	}
 
 	function cacheDrawables() {
-		mDrawables[:LeftGoalMeter] = View.findDrawableById("LeftGoalMeter");
+        mDrawables[:LeftGoalMeter] = View.findDrawableById("LeftGoalMeter");
 		mDrawables[:RightGoalMeter] = View.findDrawableById("RightGoalMeter");
 		mDrawables[:DataArea] = View.findDrawableById("DataArea");
 		mDrawables[:Indicators] = View.findDrawableById("Indicators");
@@ -142,8 +142,7 @@ class CrystalView extends Ui.WatchFace {
 		// Use mDataFields instead.
 		//mDrawables[:DataFields] = View.findDrawableById("DataFields");
 		mDataFields = View.findDrawableById("DataFields");
-
-		mDrawables[:MoveBar] = View.findDrawableById("MoveBar");
+        mDrawables[:MoveBar] = View.findDrawableById("MoveBar");
 
 		setHideSeconds(App.getApp().getProperty("HideSeconds")); // Requires mTime, mDrawables[:MoveBar];
 	}
@@ -190,7 +189,7 @@ class CrystalView extends Ui.WatchFace {
 	function updateThemeColours() {
 
 		// #182 Protect against null or unexpected type e.g. String.
-		var theme = App.getApp().getIntProperty("Theme", 0);
+		var theme = App.getApp().getIntProperty("Theme", 8);
 
 		// Theme-specific colours.
 		gThemeColour = [
@@ -336,6 +335,7 @@ class CrystalView extends Ui.WatchFace {
 
 	function getValuesForGoalType(type) {
 		var values = {
+
 			:current => 0,
 			:max => 1,
 			:isValid => true
@@ -480,6 +480,6 @@ class CrystalView extends Ui.WatchFace {
 		}
 
 		mTime.setHideSeconds(hideSeconds);
-		mDrawables[:MoveBar].setFullWidth(hideSeconds);
+		//mDrawables[:MoveBar].setFullWidth(hideSeconds);
 	}
 }
